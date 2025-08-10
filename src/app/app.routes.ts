@@ -8,30 +8,30 @@ export const routes: Routes = [
   },
   {
     path: 'home',
-    loadComponent: () => import('./features/home/home.component'),
+    loadComponent: () => import('./pages/home/home'),
   },
   {
-    path: 'about-us',
-    loadComponent: () => import('./features/about/about.component'),
+    path: 'about',
+    loadComponent: () => import('./pages/about/about'),
   },
   {
-    path: 'portfolio',
-    loadComponent: () => import('./features/portfolio/portfolio.component'),
+    path: 'works',
+    loadComponent: () => import('./pages/works/works'),
   },
   {
     path: 'services',
-    loadComponent: () => import('./features/services/services.component'),
+    loadComponent: () => import('./pages/our-services/our-services'),
   },
   {
-    path: 'contact-us',
-    loadComponent: () => import('./features/contact/contact.component'),
+    path: 'careers',
+    loadComponent: () => import('./pages/careers/careers'),
   },
   {
-    path: 'login',
-    loadComponent: () => import('./features/auth/login/login.component'),
+    path: 'blogs',
+    loadComponent: () => import('./pages/blogs/blogs'),
   },
   {
-    path: 'registration',
-    loadComponent: () => import('./features/auth/registration/registration.component'),
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact'),
   },
 ];

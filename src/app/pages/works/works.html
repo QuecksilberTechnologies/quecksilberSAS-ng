@@ -1,0 +1,39 @@
+<qs-page-header
+  pageTitle="Portfolio"
+  pageDescription="Mere recent projects yahaan listed hain. Har ek ka apna unique focus aur solution hai."
+/>
+
+<div class="flex flex-wrap justify-center gap-3 mb-8">
+  @for (cat of categories; track $index) {
+  <button
+    [class]="`px-4 py-1 rounded-full transition-all duration-300 font-medium text-sm ${activeFilter === cat.value? 'bg-primary text-white shadow-md shadow-primary/30 transform scale-105'
+            : 'bg-gray-100 hover:bg-gray-200 text-gray-700'}`"
+    (click)="handleFilterChange(cat.value)"
+  >
+    {{ cat.label }}
+  </button>
+  }
+</div>
+
+<!-- Portfolio Items -->
+<div class="grid md:grid-cols-3 gap-4">
+  @for (item of filteredItems; track $index) {
+  <div
+    [class]="`p-2 shadow-lg shadow-primary/5 rounded-xl border border-primary/10 filter-${item.category}`"
+    (click)="handleItemClick(item)"
+  >
+    <div class="portfolio-content h-full">
+      <img
+        src="img/about.jpg"
+        [alt]="item.title"
+        class="rounded-t-xl"
+        loading="lazy"
+      />
+      <div class="py-4 text-center">
+        <h4 class="font-medium">{{ item.title }}</h4>
+        <p class="text-gray-500">Category: {{ item.category }}</p>
+      </div>
+    </div>
+  </div>
+  }
+</div>

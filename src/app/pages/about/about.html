@@ -1,0 +1,53 @@
+<qs-page-header
+  pageTitle="About Us"
+  pageDescription="Quecksilber Technologies is a next-gen software solutions company focused on
+    innovation, reliability, and excellence in digital transformation."
+/>
+
+<div class="flex flex-col lg:flex-row gap-8 items-center">
+  <div class="lg:w-1/2">
+    <img
+      src="img/about.jpg"
+      alt="Quecksilber Office"
+      class="rounded-xl shadow-lg w-full object-cover h-[300px] md:h-[400px]"
+      loading="lazy"
+    />
+  </div>
+
+  <div class="lg:w-1/2 space-y-6">
+    <h3 class="font-semibold text-2xl md:text-3xl text-center lg:text-left">
+      Empowering Digital Journeys with
+      <span class="block mt-1">Cutting-Edge Solutions</span>
+    </h3>
+
+    <p class="italic text-gray-600 text-center lg:text-left">
+      Founded with a vision to simplify technology, Quecksilber blends
+      creativity and code to deliver powerful enterprise solutions tailored to
+      modern-day business needs.
+    </p>
+
+    <!-- <ul class="space-y-3 text-base md:text-lg">
+            {[
+              "Full-stack development, AI, cloud, product engineering",
+              "Passionate team solving real-world problems through code",
+              "Trusted by startups and enterprises alike",
+            ].map((item, index) => (
+              <li key={index} class="flex items-center">
+                <i class="bi bi-check-circle-fill text-success mr-2" />
+                {{item}}
+              </li>
+            ))}
+          </ul> -->
+
+    <ul class="space-y-3 text-base md:text-lg">
+      @for (item of items; track $index) {
+      <li class="flex items-center">
+        <span class="bi bi-check-circle-fill text-success font mr-2">✅</span>
+        {{ item }}
+      </li>
+      }
+    </ul>
+
+    <button class="rounded-full w-full sm:w-auto">Discover More</button>
+  </div>
+</div>
