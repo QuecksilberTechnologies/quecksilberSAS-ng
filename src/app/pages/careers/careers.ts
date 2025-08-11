@@ -1,11 +1,12 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { PageHeader } from '@shared/components';
 import { Team } from '@shared/interfaces';
+import { Linkedin, LucideAngularModule } from 'lucide-angular';
 import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'qs-careers',
-  imports: [PageHeader, CardModule],
+  imports: [PageHeader, CardModule, LucideAngularModule],
   templateUrl: './careers.html',
   styleUrl: './careers.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -50,4 +51,6 @@ export default class Careers {
       alt: 'Abhishek',
     },
   ]);
+
+  readonly Linkedin = Linkedin;
 }
