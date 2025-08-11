@@ -1,31 +1,27 @@
 <qs-page-header
   pageTitle="Join Our Team"
   pageDescription="Explore rewarding career opportunities and help us shape the future of
-  technology at Quecksilber Technologies."
-/>
+  technology at Quecksilber Technologies." />
 
 <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-10">
   <!-- Team Cards -->
   @for (member of teamMembers(); track $index) {
-  <div
-    class="bg-white rounded-lg shadow-sm border border-gray-50 p-6 flex flex-col items-center text-center"
-  >
-    <img
-      [src]="member.image"
-      [alt]="member.alt"
-      class="w-20 h-20 rounded-full mb-4 object-cover shadow"
-      loading="lazy"
-    />
+  <p-card class="text-center">
+    <div class="flex justify-center">
+      <img
+        [src]="member.image"
+        [alt]="member.alt"
+        class="w-20 h-20 rounded-full mb-4 object-cover shadow"
+        loading="lazy" />
+    </div>
     <h4 class="font-semibold text-lg mb-1">{{ member.name }}</h4>
     <p class="text-primary font-medium mb-2">{{ member.position }}</p>
-  </div>
+  </p-card>
   }
 </section>
 
 <div class="flex flex-col items-center justify-center py-8">
-  <h3 class="text-2xl md:text-3xl font-semibold text-primary mb-2">
-    We're Not Hiring Right Now
-  </h3>
+  <h3 class="text-2xl md:text-3xl font-semibold text-primary mb-2">We're Not Hiring Right Now</h3>
   <p class="text-gray-600 text-base md:text-lg text-center max-w-md mb-2">
     There are no open positions at Quecksilber Technologies at this time.
   </p>

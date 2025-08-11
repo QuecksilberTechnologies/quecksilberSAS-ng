@@ -1,10 +1,12 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageHeader } from '@shared/components';
 import { PortfolioCategory, PortfolioItem } from '@shared/interfaces';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'qs-works',
-  imports: [PageHeader],
+  imports: [PageHeader, CardModule, ButtonModule],
   templateUrl: './works.html',
   styleUrl: './works.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -103,9 +105,7 @@ export default class Works {
   get filteredItems(): PortfolioItem[] {
     return this.activeFilter === 'all'
       ? this.portfolioItems
-      : this.portfolioItems.filter(
-          (item) => item.category === this.activeFilter
-        );
+      : this.portfolioItems.filter(item => item.category === this.activeFilter);
   }
 
   handleFilterChange(filter: string) {

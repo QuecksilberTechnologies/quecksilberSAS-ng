@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { PageHeader } from '@shared/components';
 import { Team } from '@shared/interfaces';
+import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'qs-careers',
-  imports: [PageHeader],
+  imports: [PageHeader, CardModule],
   templateUrl: './careers.html',
   styleUrl: './careers.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
