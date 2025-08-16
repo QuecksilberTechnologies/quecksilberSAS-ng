@@ -19,3 +19,13 @@ body {
   height: 100%; */
   @apply bg-purple-50;
 }
+
+:root {
+  --theme-primary: #6d1bab;
+  --theme-primary-light: #faf2ff;
+  --theme-background: #f7f8fa;
+
+  /* Route progressbar */
+  --ng-progress-color: #9f4cde;
+  --ng-progress-thickness: 4;
+}
