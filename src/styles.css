@@ -3,7 +3,7 @@
 /* tailwindcss */
 @import 'tailwindcss';
 /* @import "primeicons/primeicons.css"; */
-/* @plugin "tailwindcss-primeui"; */
+@plugin "tailwindcss-primeui";
 
 /* dark mode configuration */
 @custom-variant dark (&:where(.dark, .dark *));

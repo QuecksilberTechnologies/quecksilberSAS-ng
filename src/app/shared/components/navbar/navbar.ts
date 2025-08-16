@@ -1,12 +1,7 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DOCUMENT,
-  inject,
-  OnDestroy,
-} from '@angular/core';
-import { Router, RouterModule } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
+import { ChangeDetectionStrategy, Component, DOCUMENT, inject, OnDestroy } from '@angular/core';
+import { Router, RouterModule } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 
 interface NavItem {
   name: string;
@@ -23,7 +18,7 @@ interface SocialLink {
 
 @Component({
   selector: 'qs-navbar',
-  imports: [RouterModule, NgOptimizedImage],
+  imports: [RouterModule, NgOptimizedImage, ButtonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -41,7 +36,7 @@ export class Navbar implements OnDestroy {
     { name: 'Services', path: '/services' },
     { name: 'Careers', path: '/careers' },
     { name: 'Blogs', path: '/blogs' },
-    { name: 'Contact', path: '/contact' },
+    // { name: 'Contact', path: '/contact' },
   ];
 
   // Social media links as TypeScript variable
