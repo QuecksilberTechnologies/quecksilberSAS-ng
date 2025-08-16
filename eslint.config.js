@@ -11,7 +11,6 @@ module.exports = tseslint.config(
       ...tseslint.configs.recommended,
       ...tseslint.configs.stylistic,
       ...angular.configs.tsRecommended,
-      'plugin:prettier/recommended',
     ],
     processor: angular.processInlineTemplates,
     rules: {
@@ -35,14 +34,7 @@ module.exports = tseslint.config(
   },
   {
     files: ['**/*.html'],
-    excludedFiles: ['*inline-template*.html'],
-    extends: [
-      ...angular.configs.templateRecommended,
-      ...angular.configs.templateAccessibility,
-      'plugin:@angular-eslint/template/recommended',
-    ],
-    rules: {
-      'prettier/prettier': ['error', { parser: 'angular' }],
-    },
+    extends: [...angular.configs.templateRecommended, ...angular.configs.templateAccessibility],
+    rules: {},
   }
 );
