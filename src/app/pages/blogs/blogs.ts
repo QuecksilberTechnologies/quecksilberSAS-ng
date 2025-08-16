@@ -5,7 +5,6 @@ import { PageHeader } from '@shared/components';
   selector: 'qs-blogs',
   imports: [PageHeader],
   templateUrl: './blogs.html',
-  styleUrl: './blogs.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class Blogs {}

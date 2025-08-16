@@ -5,7 +5,6 @@ import { PageHeader } from '@shared/components';
   selector: 'qs-contact',
   imports: [PageHeader],
   templateUrl: './contact.html',
-  styleUrl: './contact.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class Contact {}

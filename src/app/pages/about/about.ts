@@ -7,7 +7,6 @@ import { Code, LucideAngularModule, Server, Shield } from 'lucide-angular';
   selector: 'qs-about',
   imports: [PageHeader, NgOptimizedImage, LucideAngularModule],
   templateUrl: './about.html',
-  styleUrl: './about.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class About {

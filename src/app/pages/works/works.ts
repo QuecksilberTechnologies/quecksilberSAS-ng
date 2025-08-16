@@ -1,15 +1,14 @@
+import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { PageHeader } from '@shared/components';
 import { PortfolioCategory, PortfolioItem } from '@shared/interfaces';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'qs-works',
   imports: [PageHeader, CardModule, ButtonModule, NgOptimizedImage],
   templateUrl: './works.html',
-  styleUrl: './works.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class Works implements OnInit {
