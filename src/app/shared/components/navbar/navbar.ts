@@ -6,6 +6,7 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 interface NavItem {
   name: string;
@@ -22,7 +23,7 @@ interface SocialLink {
 
 @Component({
   selector: 'qs-navbar',
-  imports: [RouterModule],
+  imports: [RouterModule, NgOptimizedImage],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

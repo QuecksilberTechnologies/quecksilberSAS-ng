@@ -2,7 +2,9 @@
   <div class="flex max-w-7xl mx-auto py-3 justify-between items-center">
 
     <div class="nav-brand flex items-center cursor-pointer" (click)="handleNavClick('/')">
-      <img class="h-[40px] w-auto" ngSrc="quecksilberIcon.png" alt="Logo" />
+      <div class="relative w-40 h-[40px]">
+        <img ngSrc="quecksilberIcon.png" alt="Logo"  fill placeholder="data:image/png;base64,iVBORw0K..." priority  />
+      </div>      
     </div>
 
     <!-- Hamburger Menu for Mobile -->
