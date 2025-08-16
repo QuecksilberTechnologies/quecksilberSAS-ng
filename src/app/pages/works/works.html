@@ -1,13 +1,9 @@
-<qs-page-header
-  pageTitle="Portfolio"
+<qs-page-header pageTitle="Portfolio"
   pageDescription="Mere recent projects yahaan listed hain. Har ek ka apna unique focus aur solution hai." />
 
 <div class="flex flex-wrap justify-center gap-3 mb-8">
   @for (cat of categories; track $index) {
-  <p-button
-    variant="outlined"
-    [severity]="activeFilter === cat.value ? 'primary' : 'secondary'"
-    size="small"
+  <p-button variant="outlined" [severity]="activeFilter === cat.value ? 'primary' : 'secondary'" size="small"
     (click)="handleFilterChange(cat.value)">
     {{ cat.label }}
   </p-button>
@@ -20,7 +16,9 @@
   <p-card class="p-0" (click)="handleItemClick(item)">
     <img src="img/about.jpg" [alt]="item.title" class="rounded" loading="lazy" />
     <div class="py-4 text-center">
+      @if(item.title) { @if(item.title) {
       <h4 class="font-medium">{{ item.title }}</h4>
+      } }
       <p class="text-gray-500">Category: {{ item.category }}</p>
     </div>
   </p-card>
