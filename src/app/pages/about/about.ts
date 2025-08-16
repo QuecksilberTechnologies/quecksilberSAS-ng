@@ -1,9 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageHeader } from '@shared/components';
+import { NgOptimizedImage } from '@angular/common'
 
 @Component({
   selector: 'qs-about',
-  imports: [PageHeader],
+  imports: [PageHeader, NgOptimizedImage],
   templateUrl: './about.html',
   styleUrl: './about.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

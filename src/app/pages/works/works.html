@@ -11,11 +11,15 @@
 </div>
 
 <!-- Portfolio Items -->
-<div class="grid md:grid-cols-3 gap-6">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
   @for (item of filteredItems; track $index) {
-  <p-card class="p-0" (click)="handleItemClick(item)">
-    <img class="rounded" loading="lazy" src="img/about.jpg" [alt]="item.title" />
-    <div class="py-4 text-center">
+  <p-card class="p-0 rounded-md" (click)="handleItemClick(item)">
+    <div class="relative w-full h-44 rounded-md overflow-hidden">
+      <img class="object-cover rounded-lg" placeholder="data:image/png;base64,iVBORw0K..."
+       ngSrc="img/about.jpg" fill priority [alt]="item.title" /> 
+    </div>
+ 
+    <div class="py-3 text-center">
       @if(item.title) { @if(item.title) {
       <h4 class="font-medium">{{ item.title }}</h4>
       } }

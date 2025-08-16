@@ -3,10 +3,11 @@ import { PageHeader } from '@shared/components';
 import { PortfolioCategory, PortfolioItem } from '@shared/interfaces';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'qs-works',
-  imports: [PageHeader, CardModule, ButtonModule],
+  imports: [PageHeader, CardModule, ButtonModule, NgOptimizedImage],
   templateUrl: './works.html',
   styleUrl: './works.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

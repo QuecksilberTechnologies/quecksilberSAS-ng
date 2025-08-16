@@ -3,10 +3,11 @@ import { PageHeader } from '@shared/components';
 import { Team } from '@shared/interfaces';
 import { Linkedin, LucideAngularModule } from 'lucide-angular';
 import { CardModule } from 'primeng/card';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'qs-careers',
-  imports: [PageHeader, CardModule, LucideAngularModule],
+  imports: [PageHeader, CardModule, LucideAngularModule, NgOptimizedImage],
   templateUrl: './careers.html',
   styleUrl: './careers.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

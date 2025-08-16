@@ -6,7 +6,8 @@
   @for (member of teamMembers(); track $index) {
   <p-card class="text-center">
     <div class="flex justify-center">
-      <img class="w-20 h-20 rounded-full mb-4 object-cover" loading="lazy" [src]="member.image" [alt]="member.alt" />
+      <img class="w-20 h-20 rounded-full mb-4 object-cover" width="20" height="20"  priority placeholder="data:image/png;base64,iVBORw0K..." [ngSrc]="member.image"
+      [alt]="member.alt" />
     </div>
     <h4 class="font-semibold text-lg mb-1">{{ member.name }}</h4>
     <p class="text-primary font-medium text-sm mb-2">{{ member.position }}</p>
