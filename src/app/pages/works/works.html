@@ -1,9 +1,13 @@
-<qs-page-header pageTitle="Portfolio"
-  pageDescription="Mere recent projects yahaan listed hain. Har ek ka apna unique focus aur solution hai." />
+<qs-page-header
+  pageTitle="Our Work"
+  pageDescription="Recent projects are showcased here. Each project is unique and tailored to meet the needs of our clients." />
 
 <div class="flex flex-wrap justify-center gap-3 mb-8">
   @for (cat of categories; track $index) {
-  <p-button variant="outlined" size="small" [severity]="activeFilter === cat.value ? 'primary' : 'secondary'"
+  <p-button
+    variant="outlined"
+    size="small"
+    [severity]="activeFilter === cat.value ? 'primary' : 'secondary'"
     (click)="handleFilterChange(cat.value)">
     {{ cat.label }}
   </p-button>
@@ -15,10 +19,15 @@
   @for (item of filteredItems; track $index) {
   <p-card class="p-0 rounded-md" (click)="handleItemClick(item)">
     <div class="relative w-full h-44 rounded-md overflow-hidden">
-      <img class="object-cover rounded-lg" placeholder="data:image/png;base64,iVBORw0K..."
-       ngSrc="img/about.jpg" fill priority [alt]="item.title" /> 
+      <img
+        class="object-cover rounded-lg"
+        placeholder="data:image/png;base64,iVBORw0K..."
+        ngSrc="img/about.jpg"
+        fill
+        priority
+        [alt]="item.title" />
     </div>
- 
+
     <div class="py-3 text-center">
       @if(item.title) { @if(item.title) {
       <h4 class="font-medium">{{ item.title }}</h4>

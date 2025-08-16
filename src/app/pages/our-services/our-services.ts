@@ -1,4 +1,3 @@
-import { NgOptimizedImage } from '@angular/common';
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { PageHeader } from '@shared/components';
 import {
@@ -21,7 +20,12 @@ export interface OurService {
 
 @Component({
   selector: 'qs-our-services',
-  imports: [PageHeader, CardModule, LucideAngularModule, NgOptimizedImage],
+  imports: [
+    PageHeader,
+    CardModule,
+    LucideAngularModule,
+    // NgOptimizedImage
+  ],
   templateUrl: './our-services.html',
   styleUrl: './our-services.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
