@@ -1,11 +1,10 @@
-<qs-page-header
-  pageTitle="Our Services"
+<qs-page-header pageTitle="Our Services"
   pageDescription="Discover the range of services Quecksilber Technologies offers to help your business innovate, grow, and succeed in the digital world." />
 
 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   @for (service of serviceLists(); track $index) {
   <p-card class="p-4">
-    <lucide-angular [img]="service.icon" class="w-8 h-8 mb-2" strokeWidth="1.6"></lucide-angular>
+    <lucide-angular class="w-8 h-8 mb-2" strokeWidth="1.6" [img]="service.icon"></lucide-angular>
     <h3 class="font-medium text-xl mb-2">{{service.title}}</h3>
     <p class="text-gray-600">{{service.description}}</p>
   </p-card>

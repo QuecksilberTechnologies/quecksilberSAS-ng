@@ -12,7 +12,7 @@ import { CardModule } from 'primeng/card';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class Careers {
-  teamMembers = signal<Team[]>([
+  readonly teamMembers = signal<Team[]>([
     {
       name: 'Varun',
       position: 'Chief Executive Officer (Founder)',

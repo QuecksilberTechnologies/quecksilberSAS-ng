@@ -26,7 +26,7 @@ export interface OurService {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class OurServices {
-  serviceLists = signal<OurService[]>([
+  readonly serviceLists = signal<OurService[]>([
     {
       icon: Laptop,
       title: 'Web Development',

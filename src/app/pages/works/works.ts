@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { PageHeader } from '@shared/components';
 import { PortfolioCategory, PortfolioItem } from '@shared/interfaces';
 import { ButtonModule } from 'primeng/button';
@@ -11,7 +11,7 @@ import { CardModule } from 'primeng/card';
   styleUrl: './works.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class Works {
+export default class Works implements OnInit {
   activeFilter = 'all';
   portfolioItems: PortfolioItem[] = [];
 

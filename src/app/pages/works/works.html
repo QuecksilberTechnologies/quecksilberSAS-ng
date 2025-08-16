@@ -3,7 +3,7 @@
 
 <div class="flex flex-wrap justify-center gap-3 mb-8">
   @for (cat of categories; track $index) {
-  <p-button variant="outlined" [severity]="activeFilter === cat.value ? 'primary' : 'secondary'" size="small"
+  <p-button variant="outlined" size="small" [severity]="activeFilter === cat.value ? 'primary' : 'secondary'"
     (click)="handleFilterChange(cat.value)">
     {{ cat.label }}
   </p-button>
@@ -14,7 +14,7 @@
 <div class="grid md:grid-cols-3 gap-6">
   @for (item of filteredItems; track $index) {
   <p-card class="p-0" (click)="handleItemClick(item)">
-    <img src="img/about.jpg" [alt]="item.title" class="rounded" loading="lazy" />
+    <img class="rounded" loading="lazy" src="img/about.jpg" [alt]="item.title" />
     <div class="py-4 text-center">
       @if(item.title) { @if(item.title) {
       <h4 class="font-medium">{{ item.title }}</h4>
