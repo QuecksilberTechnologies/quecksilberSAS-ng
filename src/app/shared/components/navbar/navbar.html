@@ -6,7 +6,7 @@
     </div>
 
     <!-- Hamburger Menu for Mobile -->
-    <button class="lg:hidden flex flex-col justify-center items-center" (click)="setIsOpen()">
+    <button type="button" class="lg:hidden flex flex-col justify-center items-center" (click)="setIsOpen()">
       <span
         [class]="`block w-6 h-0.5 bg-gray-600 mb-1 transition-transform ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`">
       </span>
@@ -19,8 +19,8 @@
     <div
       [class]="`lg:flex gap-4 ${ isOpen ? 'flex flex-col absolute top-[100%] left-0 w-full bg-white p-4 shadow-md border border-b items-center h-80' : 'hidden' }`">
       @for (item of navItems; track item.name) {
-      <div class="py-[0.3rem] px-1 cursor-pointer hover:text-primary" [routerLink]="item.path"
-        routerLinkActive="text-primary" (click)="isOpen = false">
+      <div class="py-[0.3rem] px-1 cursor-pointer hover:text-primary" routerLinkActive="text-primary"
+        [routerLink]="item.path" (click)="isOpen = false">
         {{ item.name }}
       </div>
       }
