@@ -17,6 +17,6 @@ export class App implements OnInit {
   readonly #primeng = inject(PrimeNG);
 
   ngOnInit() {
-    this.#primeng.ripple.set(true);
+    this.#primeng.ripple.set(false);
   }
 }
