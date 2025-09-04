@@ -28,4 +28,32 @@ body {
   /* Route progressbar */
   --ng-progress-color: #9f4cde;
   --ng-progress-thickness: 4;
+
+  /* PrimeNg */
+  --p-message-text-sm-font-size: 0.92rem !important;
+
+  /* --p-inputtext-border-radius: 0.3rem !important;
+  --p-textarea-border-radius: 0.3rem !important;
+  --p-select-border-radius: 0.3rem !important; */
+
+  --p-inputtext-focus-ring-width: 1px !important;
+  --p-inputtext-focus-ring-style: solid !important;
+  --p-inputtext-focus-ring-color: var(--p-primary-color) !important;
+
+  --p-select-focus-ring-width: 1px !important;
+  --p-select-focus-ring-style: solid !important;
+  --p-select-focus-ring-color: var(--p-primary-color) !important;
+
+  --p-textarea-focus-ring-width: 1px !important;
+  --p-textarea-focus-ring-style: solid !important;
+  --p-textarea-focus-ring-color: var(--p-primary-color) !important;
+
+  /* --p-button-border-radius: 0.4rem !important; */
+  --p-card-border-radius: 0.8rem !important;
+  /* --p-card-body-padding: 0.6rem !important; */
+  /* --p-card-shadow: 0 !important; */
+}
+
+.work-card {
+  --p-card-body-padding: 0rem !important;
 }

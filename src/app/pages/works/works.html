@@ -17,20 +17,19 @@
 <!-- Portfolio Items -->
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
   @for (item of filteredItems; track $index) {
-  <p-card class="p-0 rounded-md" (click)="handleItemClick(item)">
-    <div class="relative w-full h-44 rounded-md overflow-hidden">
+  <p-card class="work-card !rounded-lg md:min-w-60" (click)="handleItemClick(item)">
+    <div class="relative w-full h-44 rounded-t-lg overflow-hidden">
       <img
-        class="object-cover rounded-lg"
+        class="object-cover"
         placeholder="data:image/png;base64,iVBORw0K..."
-        ngSrc="img/about.jpg"
         fill
         priority
+        [ngSrc]="`img/works/${item.img}`"
         [alt]="item.title" />
     </div>
-
-    <div class="py-3 text-center">
+    <div class="p-4 text-center">
       @if(item.title) { @if(item.title) {
-      <h4 class="font-medium">{{ item.title }}</h4>
+      <h4 class="font-medium text-lg">{{ item.title }}</h4>
       } }
       <p class="text-gray-500">Category: {{ item.category }}</p>
     </div>
