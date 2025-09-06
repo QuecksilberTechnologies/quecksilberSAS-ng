@@ -9,7 +9,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideRouter } from '@angular/router';
 import { provideServiceWorker } from '@angular/service-worker';
 import { MyPreset } from '@core/mypreset';
+import { MessageService } from 'primeng/api';
 import { providePrimeNG } from 'primeng/config';
+import { DialogService } from 'primeng/dynamicdialog';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
@@ -31,5 +33,7 @@ export const appConfig: ApplicationConfig = {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
+    MessageService,
+    DialogService,
   ],
 };
