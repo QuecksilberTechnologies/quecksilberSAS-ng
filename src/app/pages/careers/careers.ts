@@ -1,18 +1,12 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { Teams } from '@core/services/teams';
-import { PageHeader } from '@shared/components';
-import { Team } from '@shared/interfaces';
-import { LucideAngularModule } from 'lucide-angular';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PageHeader, TeamLists } from '@shared/components';
 import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'qs-careers',
-  imports: [PageHeader, CardModule, LucideAngularModule, NgOptimizedImage],
+  imports: [PageHeader, CardModule, NgOptimizedImage, TeamLists],
   templateUrl: './careers.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export default class Careers {
-  readonly #teams = inject(Teams);
-  readonly teamMembers = signal<Team[]>(this.#teams.getTeams());
-}
+export default class Careers {}

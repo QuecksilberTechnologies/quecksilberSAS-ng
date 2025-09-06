@@ -1,21 +1,16 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
-import { Teams } from '@core/services/teams';
-import { PageHeader } from '@shared/components';
-import { Team } from '@shared/interfaces';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PageHeader, TeamLists } from '@shared/components';
 import { Code, LucideAngularModule, Server, Shield } from 'lucide-angular';
 import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'qs-about',
-  imports: [PageHeader, NgOptimizedImage, LucideAngularModule, CardModule],
+  imports: [PageHeader, NgOptimizedImage, LucideAngularModule, CardModule, TeamLists],
   templateUrl: './about.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class About {
-  readonly #teams = inject(Teams);
-  readonly teamMembers = signal<Team[]>(this.#teams.getTeams());
-
   protected items = [
     {
       text: 'Expertise Across Domains: Full-stack development, AI, cloud, and product engineering',
