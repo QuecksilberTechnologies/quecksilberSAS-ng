@@ -1,4 +1,97 @@
 <qs-page-header
   pageTitle="Contact Us"
-  pageDescription="Get in touch with Quecksilber Technologies for inquiries, support, or collaboration opportunities. We're here to help you on your digital journey."
-/>
+  pageDescription="Get in touch with Quecksilber Technologies for inquiries, support, or collaboration opportunities. We're here to help you on your digital journey." />
+
+<div class="space-y-16 grid grid-cols-2 gap-6">
+  <div class="space-y-4">
+    <h4 class="font-semibold text-3xl">Get in Touch</h4>
+    <p-card class="p-2.5">
+      <form class="flex flex-col gap-4" [formGroup]="contactForm">
+        <!-- User Name -->
+        <div>
+          <label class="mb-1 block" for="userName">Name</label>
+          <input
+            formControlName="userName"
+            class="w-full"
+            id="userName"
+            type="text"
+            pInputText
+            [pAutoFocus]="true"
+            [invalid]="isInvalid('userName')" />
+          @if (isInvalid('userName')) {
+          <p-message severity="error" size="small" variant="simple">Name is required.</p-message>
+          }
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="mb-1 block" for="email">Email</label>
+          <input
+            formControlName="email"
+            class="w-full"
+            id="email"
+            type="text"
+            pInputText
+            [invalid]="isInvalid('email')" />
+          @if (isInvalid('email')) {
+          <p-message severity="error" size="small" variant="simple">Email is required.</p-message>
+          }
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label class="mb-1 block" for="message">Message</label>
+          <textarea
+            formControlName="message"
+            class="w-full"
+            id="message"
+            type="text"
+            pTextarea
+            [invalid]="isInvalid('message')"></textarea>
+          @if (isInvalid('message')) {
+          <p-message severity="error" size="small" variant="simple">Message is required.</p-message>
+          }
+        </div>
+      </form>
+
+      <div class="flex justify-end w-full mt-4">
+        <p-button
+          [severity]="'primary'"
+          [label]="isSaving() ? 'Saving...' : 'Send Message'"
+          [loading]="isSaving()"
+          [disabled]="contactForm.invalid || isSaving()"
+          (onClick)="onSend()" />
+      </div>
+      <!-- <pre class="text-sm text-red-600 mt-10">{{contactForm.value|json}}</pre> -->
+    </p-card>
+  </div>
+
+  <div class="space-y-4">
+    <h4 class="font-semibold text-3xl">Contact Information</h4>
+    <div class="grid grid-cols-2">
+      <ul class="flex flex-col gap-4">
+        <li class="grid grid-cols-2">
+          <div>Icon</div>
+          <div>
+            <h6 class="font-medium text-lg">Email</h6>
+            <p class="text-gray-600 text-base">contact@quecksilber.com</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-2">
+          <div>Icon</div>
+          <div>
+            <h6 class="font-medium text-lg">Phone</h6>
+            <p class="text-gray-600 text-base">(123) 456-7890</p>
+          </div>
+        </li>
+        <li class="grid grid-cols-2">
+          <div>Icon</div>
+          <div>
+            <h6 class="font-medium text-lg">Office</h6>
+            <p class="text-gray-600 text-base">Office 123 Tech Avenue, Silicon Valley, CA 94025</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
