@@ -35,7 +35,7 @@ export class Navbar implements OnDestroy {
     { name: 'Works', path: '/works' },
     { name: 'Services', path: '/services' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Blogs', path: '/blogs' },
+    // { name: 'Blogs', path: '/blogs' },
     // { name: 'Contact', path: '/contact' },
   ];
 
