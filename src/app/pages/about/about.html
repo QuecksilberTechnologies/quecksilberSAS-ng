@@ -1,41 +1,85 @@
 <qs-page-header
-  pageTitle="About Us"
+  pageTitle="About Quecksilber Technologies"
   pageDescription="Quecksilber Technologies is a next-gen software solutions company focused on
     innovation, reliability, and excellence in digital transformation." />
 
-<div class="flex flex-col lg:flex-row gap-4 items-center">
-  <img
-    ngSrc="img/about.png"
-    placeholder="data:image/png;base64,iVBORw0K..."
-    priority
-    width="300"
-    height="400"
-    alt="Quecksilber Office"
-    class="rounded-xl shadow-2xl shadow-primary/15 w-full object-cover h-[300px] md:h-[400px]" />
+<div class="space-y-16">
+  <div class="flex flex-col lg:flex-row gap-4 items-start">
+    <img
+      ngSrc="img/about.jpg"
+      placeholder="data:image/png;base64,iVBORw0K..."
+      priority
+      width="300"
+      height="400"
+      alt="Quecksilber Office"
+      class="rounded-xl shadow-2xl shadow-primary/15 w-full object-cover h-[300px] md:h-[400px]" />
 
-  <div class="lg:w-6xl space-y-6 p-4">
-    <h3 class="font-semibold text-2xl md:text-4xl text-center lg:text-left text-balance">
-      Empowering Digital Journeys with Cutting-Edge Solutions
-    </h3>
+    <div class="lg:w-6xl space-y-6 p-4">
+      <h3 class="font-medium text-2xl md:text-4xl text-center lg:text-left text-balance leading-12">
+        Empowering Digital Journeys with Innovative Solutions
+      </h3>
 
-    <p class="italic text-gray-600 text-center lg:text-left text-balance">
-      Founded with a vision to simplify technology, Quecksilber blends creativity and code to
-      deliver powerful enterprise solutions tailored to modern-day business needs.
-    </p>
+      <p class="italic text-gray-600 text-center lg:text-left text-balance">
+        At Quecksilber, we simplify technology by blending creativity with code to craft powerful
+        enterprise solutions tailored for today's business challenges.
+      </p>
 
-    <ul class="space-y-1 text-base md:text-lg">
-      @for (item of items; track $index) {
-      <li class="flex items-center">
-        <lucide-angular
-          class="w-5 h-5 mr-2"
-          color="#2a3481"
-          [strokeWidth]="1.5"
-          [img]="item.icon" />
-        {{ item.text }}
-      </li>
-      }
-    </ul>
-
-    <!-- <p-button class="rounded-full w-full sm:w-auto" label="Discover More"></p-button> -->
+      <ul class="space-y-1 text-base md:text-lg flex flex-col">
+        @for (item of items; track $index) {
+        <li class="flex items-start max-w-max">
+          <lucide-angular
+            class="w-6 h-6 mr-2 mt-0.5"
+            color="#2a3481"
+            [strokeWidth]="1.5"
+            [img]="item.icon" />
+          <p class="italic text-gray-600">{{ item.text }}</p>
+        </li>
+        }
+      </ul>
+    </div>
   </div>
+
+  <!-- Teams at Quecksilber -->
+  <section class="flex flex-col gap-5">
+    <div class="flex flex-col items-center justify-center">
+      <h4 class="text-2xl md:text-3xl font-semibold text-primary text-center">
+        Meet Our Leadership
+      </h4>
+      <p class="text-lg text-gray-600">The architects of our success.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Team Cards -->
+      @for (member of teamMembers(); track $index) {
+      <p-card class="text-center">
+        <div class="space-y-4">
+          <div class="flex justify-center">
+            <img
+              class="w-20 h-20 rounded-full object-cover"
+              width="20"
+              height="20"
+              priority
+              placeholder="data:image/png;base64,iVBORw0K..."
+              [ngSrc]="member.image"
+              [alt]="member.alt" />
+          </div>
+          <h4 class="font-semibold text-lg leading-1.5">{{ member.name }}</h4>
+          <p class="font-med ium text-base">{{ member.position }}</p>
+          <div class="flex justify-center gap-3">
+            @for (socialLink of member.socialLinks; track $index) {
+            <a
+              target="_blank"
+              rel="noopener"
+              class="text-primary-600 hover:text-primary-800 transition"
+              [href]="socialLink.url"
+              [attr.aria-label]="socialLink.ariaLabel">
+              <lucide-angular class="w-5 h-5" [img]="socialLink.icon" />
+            </a>
+            }
+          </div>
+        </div>
+      </p-card>
+      }
+    </div>
+  </section>
 </div>

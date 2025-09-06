@@ -2,23 +2,22 @@
   pageTitle="Our Work"
   pageDescription="Recent projects are showcased here. Each project is unique and tailored to meet the needs of our clients." />
 
-<div class="flex flex-wrap justify-center gap-3 mb-8">
+<div class="flex flex-wrap justify-center gap-2 mb-6">
   @for (cat of categories; track $index) {
-  <p-button
-    variant="outlined"
-    size="small"
-    [severity]="activeFilter === cat.value ? 'primary' : 'secondary'"
-    (click)="handleFilterChange(cat.value)">
-    {{ cat.label }}
-  </p-button>
+  <p-badge
+    [styleClass]="'leading-0 !cursor-pointer'"
+    [severity]="activeFilter === cat.value ? 'contrast' : 'secondary'"
+    [value]="cat.label"
+    [badgeSize]="'large'"
+    (click)="handleFilterChange(cat.value)" />
   }
 </div>
 
 <!-- Portfolio Items -->
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
   @for (item of filteredItems; track $index) {
-  <p-card class="work-card !rounded-lg md:min-w-60" (click)="handleItemClick(item)">
-    <div class="relative w-full h-44 rounded-t-lg overflow-hidden">
+  <p-card class="work-card !rounded-lg" (click)="handleItemClick(item)">
+    <div class="relative w-full h-52 rounded-t-lg overflow-hidden">
       <img
         class="object-cover"
         placeholder="data:image/png;base64,iVBORw0K..."
@@ -27,11 +26,11 @@
         [ngSrc]="`img/works/${item.img}`"
         [alt]="item.title" />
     </div>
-    <div class="p-4 text-center">
+    <div class="p-4 md:py-6 text-center">
       @if(item.title) { @if(item.title) {
       <h4 class="font-medium text-lg">{{ item.title }}</h4>
       } }
-      <p class="text-gray-500">Category: {{ item.category }}</p>
+      <p class="text-gray-500">Category: {{ item.categoryValue }}</p>
     </div>
   </p-card>
   }

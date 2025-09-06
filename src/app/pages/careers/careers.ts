@@ -16,7 +16,7 @@ export default class Careers {
     {
       name: 'Varun',
       position: 'Chief Executive Officer (Founder)',
-      image: 'img/team/avatar-person.svg',
+      image: 'img/team/3.png',
       alt: 'Varun',
       socialLinks: [
         {
@@ -41,8 +41,8 @@ export default class Careers {
     },
     {
       name: 'Poonam Gupta',
-      position: 'Human Resources Manager',
-      image: 'img/team/avatar-person.svg',
+      position: 'Human Resources Manager (HR)',
+      image: 'img/team/73.png',
       alt: 'Poonam Gupta',
       socialLinks: [
         {
@@ -68,7 +68,7 @@ export default class Careers {
     {
       name: 'Deepak',
       position: 'Tech Team Lead',
-      image: 'img/team/avatar-person.svg',
+      image: 'img/team/18.png',
       alt: 'Deepak',
       socialLinks: [
         {
@@ -94,7 +94,7 @@ export default class Careers {
     {
       name: 'Sujeet',
       position: 'Senior Frontend Developer',
-      image: 'img/team/avatar-person.svg',
+      image: 'img/team/47.png',
       alt: 'Sujeet',
       socialLinks: [
         {
@@ -120,7 +120,7 @@ export default class Careers {
     {
       name: 'Deepesh Gupta',
       position: 'Senior Backend Developer',
-      image: 'img/team/avatar-person.svg',
+      image: 'img/team/38.png',
       alt: 'Deepesh Gupta',
       socialLinks: [
         {
@@ -146,7 +146,7 @@ export default class Careers {
     {
       name: 'Abhishek',
       position: 'Senior DevOps Engineer',
-      image: 'img/team/avatar-person.svg',
+      image: 'img/team/41.png',
       alt: 'Abhishek',
       socialLinks: [
         {

@@ -1,93 +1,86 @@
 <qs-page-header
-  pageTitle="Teams at Quecksilber"
+  pageTitle="Careers at Quecksilber"
   pageDescription="Explore rewarding career opportunities and help us shape the future of
   technology at Quecksilber Technologies." />
 
-<section class="flex flex-col gap-3 mb-20">
-  <h4 class="text-2xl md:text-3xl font-semibold text-primary text-center">Brilliant teammates</h4>
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    <!-- Team Cards -->
-    @for (member of teamMembers(); track $index) {
-    <p-card class="text-center">
-      <div class="flex justify-center">
-        <img
-          class="w-20 h-20 rounded-full mb-4 object-cover"
-          width="20"
-          height="20"
-          priority
-          placeholder="data:image/png;base64,iVBORw0K..."
-          [ngSrc]="member.image"
-          [alt]="member.alt" />
+<div class="space-y-16">
+  <!-- Life at Quecksilber -->
+  <section class="grid grid-cols-1 md:grid-cols-2 bg-primary/5 p-6 md:p-8 rounded-2xl">
+    <div class="flex flex-col justify-center gap-4">
+      <h4 class="text-2xl md:text-3xl font-semibold text-primary text-center md:text-left">
+        Life at Quecksilber
+      </h4>
+      <div class="text-lg text-gray-600 text-center md:text-justify">
+        Step into a workplace where collaboration sparks innovation and strong connections make
+        every day more meaningful. At our company, we believe the friendships you build—both inside
+        and outside of work—are just as valuable as the work you do. Our culture is rooted in
+        teamwork, trust, and shared experiences. We work hard, celebrate wins together, and never
+        forget to have fun along the way. If you're looking for a place where passion meets play,
+        we'd love to welcome you to our team.
       </div>
-      <h4 class="font-semibold text-lg mb-1">{{ member.name }}</h4>
-      <p class="font-med ium text-sm mb-2">{{ member.position }}</p>
-      <div class="flex justify-center gap-3 mt-2">
-        @for (socialLink of member.socialLinks; track $index) {
-        <a
-          target="_blank"
-          rel="noopener"
-          class="text-primary-600 hover:text-primary-800 transition"
-          [href]="socialLink.url"
-          [attr.aria-label]="socialLink.ariaLabel">
-          <lucide-angular class="w-5 h-5" [img]="socialLink.icon" />
-        </a>
-        }
-      </div>
-    </p-card>
-    }
-  </div>
-</section>
-
-<section class="flex flex-col items-center justify-center gap-3 mb-20">
-  <h4 class="text-2xl md:text-3xl font-semibold text-primary text-center">Life at Grab</h4>
-  <img
-    ngSrc="img/Digital-transformation-amico.png"
-    alt="Quecksilber Hero"
-    width="250"
-    height="250"
-    placeholder="data:image/png;base64,iVBORw0K..."
-    priority
-    class="w-full max-w-[250px] object-cover" />
-  <div class="text-lg text-gray-600 text-center md:w-6xl text-balance">
-    At Quecksilber Technologies, we're all about working together to build the future of technology.
-    Join our team and be part of a dynamic environment where you'll have the opportunity to bring
-    your ideas to life and shape the future of innovation.
-  </div>
-</section>
-
-<!-- More than just a workplace -->
-<section class="flex flex-col items-center justify-center gap-3 mb-20">
-  <h4 class="text-2xl md:text-3xl font-semibold text-primary text-center">
-    More than just a workplace
-  </h4>
-  <div class="text-lg text-gray-600 text-center md:w-6xl text-balance">
-    Join our team and be part of a dynamic workplace where collaboration and innovation thrive. We
-    value the bonds that form between colleagues, and believe that the friendships we make outside
-    of work are just as important as those we make within it. Our culture is built on fostering
-    these relationships, and we encourage our team members to work hard, but also to play hard
-    together. If you're ready to be part of a company that values both work and play, we'd love to
-    hear from you.
-  </div>
-</section>
-
-<section class="flex flex-col items-center justify-center gap-4">
-  <img
-    ngSrc="img/Teamwork-amico.png"
-    alt="Quecksilber Hero"
-    width="250"
-    height="250"
-    placeholder="data:image/png;base64,iVBORw0K..."
-    priority
-    class="w-full max-w-[250px] object-cover" />
-  <div class="flex flex-col items-center gap-3">
-    <h3 class="text-2xl md:text-3xl font-semibold text-primary">We're Not Hiring Right Now</h3>
-    <div class="text-red-500">
-      <p class="text-base md:text-lg text-center">
-        There are no open positions at Quecksilber Technologies at this time.
-      </p>
-      <p class="text-base md:text-lg text-center">
-        Stay tuned and check back soon for future career opportunities!
-      </p>
     </div>
-  </div>
-</section>
+    <div class="flex justify-end">
+      <img
+        ngSrc="img/office-place.png"
+        alt="Quecksilber Hero"
+        width="450"
+        height="450"
+        placeholder="data:image/png;base64,iVBORw0K..."
+        priority
+        class="w-full max-w-[450px] object-cover rounded-xl" />
+    </div>
+  </section>
+
+  <!-- Teams at Quecksilber -->
+  <section class="flex flex-col gap-5">
+    <h4 class="text-2xl md:text-3xl font-semibold text-primary text-center">
+      Teams at Quecksilber
+    </h4>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Team Cards -->
+      @for (member of teamMembers(); track $index) {
+      <p-card class="text-center">
+        <div class="space-y-4">
+          <div class="flex justify-center">
+            <img
+              class="w-20 h-20 rounded-full object-cover"
+              width="20"
+              height="20"
+              priority
+              placeholder="data:image/png;base64,iVBORw0K..."
+              [ngSrc]="member.image"
+              [alt]="member.alt" />
+          </div>
+          <h4 class="font-semibold text-lg leading-1.5">{{ member.name }}</h4>
+          <p class="font-med ium text-base">{{ member.position }}</p>
+          <div class="flex justify-center gap-3">
+            @for (socialLink of member.socialLinks; track $index) {
+            <a
+              target="_blank"
+              rel="noopener"
+              class="text-primary-600 hover:text-primary-800 transition"
+              [href]="socialLink.url"
+              [attr.aria-label]="socialLink.ariaLabel">
+              <lucide-angular class="w-5 h-5" [img]="socialLink.icon" />
+            </a>
+            }
+          </div>
+        </div>
+      </p-card>
+      }
+    </div>
+  </section>
+
+  <!-- We're Not Hiring Right Now -->
+  <section class="flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center gap-3">
+      <h3 class="text-2xl md:text-2xl font-semibold text-primary">We're Not Hiring Right Now</h3>
+      <div class="text-red-600">
+        <p class="text-base md:text-lg text-center text-balance max-w-2xl">
+          There are no open positions at Quecksilber Technologies at this time. Stay tuned and check
+          back soon for future career opportunities!
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
