@@ -13,7 +13,7 @@
 
     <!-- Navigation Links -->
     <div
-      [class]="`lg:flex gap-6 ${ isOpen ? 'flex flex-col absolute top-[100%] left-0 w-full bg-white p-4 shadow-md border border-b items-center h-80' : 'hidden' }`">
+      [class]="`lg:flex gap-4 ${ isOpen ? 'flex flex-col absolute top-[100%] left-0 w-full bg-white p-4 shadow-md border border-b items-center h-80' : 'hidden' }`">
       @for (item of navItems; track item.name) {
       <div
         class="py-[0.3rem] px-1 cursor-pointer hover:text-primary"
