@@ -2,159 +2,163 @@
   pageTitle="Contact Us"
   pageDescription="Get in touch with Quecksilber Technologies for inquiries, support, or collaboration opportunities. We're here to help you on your digital journey." />
 
-<div class="grid md:grid-cols-2 gap-12">
-  <div class="space-y-4">
-    <h4 class="text-3xl font-bold font-headline mb-6">Get in Touch</h4>
-    <p-card class="p-3">
-      <form class="flex flex-col gap-4" [formGroup]="contactForm">
-        <!-- User Name -->
-        <div class="space-y-2">
-          <label class="block" for="userName">Name</label>
-          <input
-            formControlName="userName"
-            class="w-full"
-            id="userName"
-            type="text"
-            placeholder="e.g. Jane Doe"
-            pInputText
-            [pAutoFocus]="true"
-            [invalid]="isInvalid('userName')" />
-          @if (isInvalid('userName')) {
-          <p-message severity="error" size="small" variant="simple">Name is required.</p-message>
-          }
+<div class="space-y-16 max-w-7xl mx-auto py-4 md:py-8">
+  <div class="grid md:grid-cols-2 gap-12">
+    <div class="space-y-4">
+      <h4 class="text-3xl font-bold font-headline mb-6">Get in Touch</h4>
+      <p-card class="p-3">
+        <form class="flex flex-col gap-4" [formGroup]="contactForm">
+          <!-- User Name -->
+          <div class="space-y-2">
+            <label class="block" for="userName">Name</label>
+            <input
+              formControlName="userName"
+              class="w-full"
+              id="userName"
+              type="text"
+              placeholder="e.g. Jane Doe"
+              pInputText
+              [pAutoFocus]="true"
+              [invalid]="isInvalid('userName')" />
+            @if (isInvalid('userName')) {
+            <p-message severity="error" size="small" variant="simple">Name is required.</p-message>
+            }
+          </div>
+
+          <!-- Email -->
+          <div class="space-y-2">
+            <label class="block" for="email">Email</label>
+            <input
+              formControlName="email"
+              class="w-full"
+              id="email"
+              type="text"
+              placeholder="e.g. Jane Doe"
+              pInputText
+              [invalid]="isInvalid('email')" />
+            @if (isInvalid('email')) {
+            <p-message severity="error" size="small" variant="simple">Email is required.</p-message>
+            }
+          </div>
+
+          <!-- Message -->
+          <div class="space-y-2">
+            <label class="block" for="message">Message</label>
+            <textarea
+              formControlName="message"
+              class="w-full"
+              id="message"
+              type="text"
+              placeholder="Tell us how we can help..."
+              pTextarea
+              [invalid]="isInvalid('message')"></textarea>
+            @if (isInvalid('message')) {
+            <p-message severity="error" size="small" variant="simple"
+              >Message is required.</p-message
+            >
+            }
+          </div>
+        </form>
+
+        <div class="flex justify-end w-full mt-4">
+          <p-button
+            [severity]="'primary'"
+            [label]="isSaving() ? 'Saving...' : 'Send Message'"
+            [loading]="isSaving()"
+            [disabled]="contactForm.invalid || isSaving()"
+            (onClick)="onSend()" />
+        </div>
+        <!-- <pre class="text-sm text-red-600 mt-10">{{contactForm.value|json}}</pre> -->
+      </p-card>
+    </div>
+
+    <div class="space-y-4">
+      <h4 class="text-3xl font-bold font-headline mb-6">Contact Information</h4>
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <div class="bg-primary/10 p-3 rounded-full text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-mail h-6 w-6">
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <div>
+            <h6 class="font-medium text-lg">Email</h6>
+            <p class="text-gray-600 text-base">hr@quecksilber.in</p>
+          </div>
         </div>
 
-        <!-- Email -->
-        <div class="space-y-2">
-          <label class="block" for="email">Email</label>
-          <input
-            formControlName="email"
-            class="w-full"
-            id="email"
-            type="text"
-            placeholder="e.g. Jane Doe"
-            pInputText
-            [invalid]="isInvalid('email')" />
-          @if (isInvalid('email')) {
-          <p-message severity="error" size="small" variant="simple">Email is required.</p-message>
-          }
+        <div class="flex items-start gap-4">
+          <div class="bg-primary/10 p-3 rounded-full text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-phone h-6 w-6">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <div>
+            <h6 class="font-medium text-lg">Phone</h6>
+            <p class="text-gray-600 text-base">+91 95228 88830</p>
+            <p class="text-gray-600 text-base">0761 405 8520</p>
+          </div>
         </div>
 
-        <!-- Message -->
-        <div class="space-y-2">
-          <label class="block" for="message">Message</label>
-          <textarea
-            formControlName="message"
-            class="w-full"
-            id="message"
-            type="text"
-            placeholder="Tell us how we can help..."
-            pTextarea
-            [invalid]="isInvalid('message')"></textarea>
-          @if (isInvalid('message')) {
-          <p-message severity="error" size="small" variant="simple">Message is required.</p-message>
-          }
+        <div class="flex items-start gap-4">
+          <div class="bg-primary/10 p-3 rounded-full text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path>
+            </svg>
+          </div>
+          <div>
+            <h6 class="font-medium text-lg">Office</h6>
+            <p class="text-gray-600 text-base">
+              Bhim Nagar, Narmada Nagar Jabalpur, Madhya Pradesh 482008
+            </p>
+          </div>
         </div>
-      </form>
 
-      <div class="flex justify-end w-full mt-4">
-        <p-button
-          [severity]="'primary'"
-          [label]="isSaving() ? 'Saving...' : 'Send Message'"
-          [loading]="isSaving()"
-          [disabled]="contactForm.invalid || isSaving()"
-          (onClick)="onSend()" />
-      </div>
-      <!-- <pre class="text-sm text-red-600 mt-10">{{contactForm.value|json}}</pre> -->
-    </p-card>
-  </div>
-
-  <div class="space-y-4">
-    <h4 class="text-3xl font-bold font-headline mb-6">Contact Information</h4>
-    <div class="space-y-6">
-      <div class="flex items-start gap-4">
-        <div class="bg-primary/10 p-3 rounded-full text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-mail h-6 w-6">
-            <rect width="20" height="16" x="2" y="4" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-        </div>
-        <div>
-          <h6 class="font-medium text-lg">Email</h6>
-          <p class="text-gray-600 text-base">hr@quecksilber.in</p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-4">
-        <div class="bg-primary/10 p-3 rounded-full text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-phone h-6 w-6">
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-          </svg>
-        </div>
-        <div>
-          <h6 class="font-medium text-lg">Phone</h6>
-          <p class="text-gray-600 text-base">+91 95228 88830</p>
-          <p class="text-gray-600 text-base">0761 405 8520</p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-4">
-        <div class="bg-primary/10 p-3 rounded-full text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M12 20.8995L16.9497 15.9497C19.6834 13.2161 19.6834 8.78392 16.9497 6.05025C14.2161 3.31658 9.78392 3.31658 7.05025 6.05025C4.31658 8.78392 4.31658 13.2161 7.05025 15.9497L12 20.8995ZM12 23.7279L5.63604 17.364C2.12132 13.8492 2.12132 8.15076 5.63604 4.63604C9.15076 1.12132 14.8492 1.12132 18.364 4.63604C21.8787 8.15076 21.8787 13.8492 18.364 17.364L12 23.7279ZM12 13C13.1046 13 14 12.1046 14 11C14 9.89543 13.1046 9 12 9C10.8954 9 10 9.89543 10 11C10 12.1046 10.8954 13 12 13ZM12 15C9.79086 15 8 13.2091 8 11C8 8.79086 9.79086 7 12 7C14.2091 7 16 8.79086 16 11C16 13.2091 14.2091 15 12 15Z"></path>
-          </svg>
-        </div>
-        <div>
-          <h6 class="font-medium text-lg">Office</h6>
-          <p class="text-gray-600 text-base">
-            Bhim Nagar, Narmada Nagar Jabalpur, Madhya Pradesh 482008
-          </p>
-        </div>
-      </div>
-
-      <div class="flex items-start gap-4">
-        <div class="bg-primary/10 p-3 rounded-full text-primary">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="currentColor">
-            <path
-              d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
-          </svg>
-        </div>
-        <div>
-          <h6 class="font-medium text-lg">Open Hours</h6>
-          <p class="text-gray-600 text-base">Monday - Friday</p>
-          <p class="text-gray-600 text-base">10:00AM - 07:00PM</p>
+        <div class="flex items-start gap-4">
+          <div class="bg-primary/10 p-3 rounded-full text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor">
+              <path
+                d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM13 12H17V14H11V7H13V12Z"></path>
+            </svg>
+          </div>
+          <div>
+            <h6 class="font-medium text-lg">Open Hours</h6>
+            <p class="text-gray-600 text-base">Monday - Friday</p>
+            <p class="text-gray-600 text-base">10:00AM - 07:00PM</p>
+          </div>
         </div>
       </div>
     </div>

@@ -11,7 +11,15 @@
         class="text-primary-50 hover:text-primary-200 transition"
         [href]="socialLink.url"
         [attr.aria-label]="socialLink.ariaLabel">
-        <lucide-angular class="w-5 h-5" [img]="socialLink.icon" />
+        @switch (socialLink.name) { @case ("LinkedIn") {
+        <qs-linkedin class="w-5 h-5 text-white" />
+        } @case ("Twitter") {
+        <qs-twitter class="w-5 h-5 text-white" />
+        } @case ("Instagram") {
+        <qs-instagram class="w-5 h-5 text-white" />
+        } @case ("Threads") {
+        <qs-threads class="w-5 h-5 text-white" />
+        } }
       </a>
       }
     </div>

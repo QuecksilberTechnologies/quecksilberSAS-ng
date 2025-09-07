@@ -1,45 +1,35 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
-import { Instagram, Linkedin, LucideAngularModule, LucideIconData, Twitter } from 'lucide-angular';
-
-export interface SocialLink {
-  name: string;
-  url: string;
-  icon: LucideIconData;
-  ariaLabel: string;
-}
+import { Instagram, Linkedin, Threads, Twitter } from '@shared/icons';
+import { FooterSocialLink } from '@shared/interfaces';
 
 @Component({
   selector: 'qs-footer',
-  imports: [LucideAngularModule],
+  imports: [Linkedin, Twitter, Instagram, Threads],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {
-  readonly socialLinks = signal<SocialLink[]>([
+  readonly socialLinks = signal<FooterSocialLink[]>([
     {
       name: 'LinkedIn',
-      url: '',
-      icon: Linkedin,
+      url: 'https://www.linkedin.com/in/quecksilber-technologies-hr-06b095128',
       ariaLabel: 'LinkedIn',
     },
     {
-      name: 'X',
-      url: '',
-      icon: Twitter,
+      name: 'Twitter',
+      url: 'https://x.com/quecksilber-technologies',
       ariaLabel: 'x',
     },
     {
       name: 'Instagram',
-      url: '',
-      icon: Instagram,
+      url: 'https://www.instagram.com/quecksilber-technologies',
       ariaLabel: 'Instagram',
     },
-    // {
-    //   name: 'Bsky',
-    //   url: 'https://bsky.app',
-    //   icon: Twitter,
-    //   ariaLabel: 'bsky',
-    // },
+    {
+      name: 'Threads',
+      url: 'https://www.threads.com/quecksilber-technologies',
+      ariaLabel: 'Threads',
+    },
   ]);
 }

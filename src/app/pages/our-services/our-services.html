@@ -2,8 +2,17 @@
   pageTitle="Our Services"
   pageDescription="Discover the range of services Quecksilber Technologies offers to help your business innovate, grow, and succeed in the digital world." />
 
-@defer {
-<qs-service-lists />
-}@placeholder {
-<p>Loading...</p>
-}
+<div class="space-y-16 max-w-7xl mx-auto py-4 md:py-8">
+  @defer {
+  <qs-service-lists />
+  }@placeholder {
+  <div class="p-10 flex justify-center items-center">
+    <p-progress-spinner
+      ariaLabel="loading"
+      strokeWidth="4"
+      fill="transparent"
+      animationDuration=".5s"
+      [style]="{ width: '34px', height: '34px' }" />
+  </div>
+  }
+</div>
