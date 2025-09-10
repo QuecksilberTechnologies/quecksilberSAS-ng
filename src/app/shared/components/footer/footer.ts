@@ -1,10 +1,11 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { Instagram, Linkedin, Threads, Twitter } from '@shared/icons';
 import { FooterSocialLink } from '@shared/interfaces';
 
 @Component({
   selector: 'qs-footer',
-  imports: [Linkedin, Twitter, Instagram, Threads],
+  imports: [Linkedin, Twitter, Instagram, Threads, RouterModule],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

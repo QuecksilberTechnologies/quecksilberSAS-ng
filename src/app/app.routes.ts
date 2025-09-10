@@ -43,4 +43,14 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/contact/contact'),
     title: `Contact | ${titleSuffix}`,
   },
+  {
+    path: 'privacy-policy',
+    loadComponent: () => import('./pages/privacy-policy/privacy-policy'),
+    title: `Privacy Policy | ${titleSuffix}`,
+  },
+  {
+    path: 'terms',
+    loadComponent: () => import('./pages/terms/terms'),
+    title: `Terms of Service | ${titleSuffix}`,
+  },
 ];
