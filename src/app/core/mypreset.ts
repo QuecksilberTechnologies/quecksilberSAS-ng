@@ -1,23 +1,24 @@
-import { definePreset } from '@primeuix/themes';
+import { definePreset, palette } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
 
 export const MyPreset = definePreset(Aura, {
   semantic: {
     colorScheme: {
       light: {
-        primary: {
-          50: '#f4f5f8',
-          100: '#c8cedd',
-          200: '#9ca6c2',
-          300: '#707fa6',
-          400: '#45588b',
-          500: '#193170',
-          600: '#152a5f',
-          700: '#12224e',
-          800: '#0e1b3e',
-          900: '#0a142d',
-          950: '#060c1c',
-        },
+        // primary: {
+        //   50: '#f6f9ff',
+        //   100: '#d2e2fd',
+        //   200: '#aecbfb',
+        //   300: '#8ab5f9',
+        //   400: '#669ef7',
+        //   500: '#4287f5',
+        //   600: '#3873d0',
+        //   700: '#2e5fac',
+        //   800: '#244a87',
+        //   900: '#1a3662',
+        //   950: '#11223d',
+        // },
+        primary: palette('#4287f5'),
         surface: {
           0: '#ffffff',
           50: '{slate.50}',
@@ -34,19 +35,20 @@ export const MyPreset = definePreset(Aura, {
         },
       },
       dark: {
-        primary: {
-          50: '#23263a',
-          100: '#2d3150',
-          200: '#38406a',
-          300: '#425084',
-          400: '#4d5f9e',
-          500: '#5870b8',
-          600: '#6a8ad1',
-          700: '#8baae0',
-          800: '#b0c7ee',
-          900: '#d6e4fb',
-          950: '#f3f7fe',
-        },
+        // primary: {
+        //   50: '#f6f9ff',
+        //   100: '#d2e2fd',
+        //   200: '#aecbfb',
+        //   300: '#8ab5f9',
+        //   400: '#669ef7',
+        //   500: '#4287f5',
+        //   600: '#3873d0',
+        //   700: '#2e5fac',
+        //   800: '#244a87',
+        //   900: '#1a3662',
+        //   950: '#11223d',
+        // },
+        primary: palette('#4287f5'),
         surface: {
           0: '#ffffff',
           50: '{zinc.50}',
