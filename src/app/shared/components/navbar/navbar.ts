@@ -29,7 +29,8 @@ export class Navbar implements OnDestroy {
   navItems: NavItem[] = [
     { name: 'Home', path: '/home' },
     { name: 'About', path: '/about' },
-    { name: 'Works', path: '/works' },
+    // { name: 'Works', path: '/works' },
+    { name: 'Products', path: '/products' },
     { name: 'Services', path: '/services' },
     { name: 'Careers', path: '/careers' },
     // { name: 'Blogs', path: '/blogs' },

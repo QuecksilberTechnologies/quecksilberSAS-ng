@@ -24,6 +24,11 @@ export const routes: Routes = [
     title: `Works | ${titleSuffix}`,
   },
   {
+    path: 'products',
+    loadComponent: () => import('./pages/products/products'),
+    title: `Products | ${titleSuffix}`,
+  },
+  {
     path: 'services',
     loadComponent: () => import('./pages/our-services/our-services'),
     title: `Services | ${titleSuffix}`,
