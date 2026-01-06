@@ -92,32 +92,32 @@ export class Teams {
           },
         ],
       },
-      {
-        name: 'Sujeet',
-        position: 'Senior Frontend Developer',
-        image: 'img/team/47.png',
-        alt: 'Sujeet',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: '',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-          {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
-          },
-          {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
-          },
-        ],
-      },
+      // {
+      //   name: 'Sujeet',
+      //   position: 'Senior Frontend Developer',
+      //   image: 'img/team/47.png',
+      //   alt: 'Sujeet',
+      //   socialLinks: [
+      //     {
+      //       name: 'LinkedIn',
+      //       url: '',
+      //       icon: Linkedin,
+      //       ariaLabel: 'LinkedIn',
+      //     },
+      //     {
+      //       name: 'X',
+      //       url: '',
+      //       icon: Twitter,
+      //       ariaLabel: 'x',
+      //     },
+      //     {
+      //       name: 'Instagram',
+      //       url: '',
+      //       icon: Instagram,
+      //       ariaLabel: 'Instagram',
+      //     },
+      //   ],
+      // },
       {
         name: 'Deepesh Gupta',
         position: 'Senior Backend Developer',
@@ -153,6 +153,33 @@ export class Teams {
           {
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/abhishek-kanojia-58312716b',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          },
+          {
+            name: 'X',
+            url: '',
+            icon: Twitter,
+            ariaLabel: 'x',
+          },
+          {
+            name: 'Instagram',
+            url: '',
+            icon: Instagram,
+            ariaLabel: 'Instagram',
+          },
+        ],
+      },
+      // Riya Sharnagat
+      {
+        name: 'Riya Sharnagat',
+        position: 'Intern',
+        image: 'img/team/73.png',
+        alt: 'Riya Sharnagat',
+        socialLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/riya-sharnagat-9b8923293',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },
