@@ -15,36 +15,8 @@ export class Teams {
   fetchTeams() {
     return [
       {
-        name: 'Deepesh Gupta',
-        position: 'Founder & CEO',
-        image: 'img/team/38.png',
-        alt: 'Deepesh Gupta',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/deepesh-gupta-06a436296',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-        ],
-      },
-      {
-        name: 'Poonam Gupta',
-        position: 'Head of Operations',
-        image: 'img/team/Poonam-Gupta.jpg',
-        alt: 'Poonam Gupta',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/poonam-gupta-bb91a03a5',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-        ],
-      },
-      {
         name: 'Varun Viswaari',
-        position: 'Strategic Investor',
+        position: 'Founder & CEO',
         image: 'img/team/3.png',
         alt: 'Varun',
         socialLinks: [
@@ -66,6 +38,20 @@ export class Teams {
           //   icon: Instagram,
           //   ariaLabel: 'Instagram',
           // },
+        ],
+      },
+      {
+        name: 'Poonam Gupta',
+        position: 'Head of Operations',
+        image: 'img/team/Poonam-Gupta.jpg',
+        alt: 'Poonam Gupta',
+        socialLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/poonam-gupta-bb91a03a5',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          },
         ],
       },
       {
@@ -91,6 +77,20 @@ export class Teams {
           {
             name: 'LinkedIn',
             url: '',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          },
+        ],
+      },
+      {
+        name: 'Deepesh Gupta',
+        position: 'Lead Backend Developer',
+        image: 'img/team/38.png',
+        alt: 'Deepesh Gupta',
+        socialLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/deepesh-gupta-06a436296',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },

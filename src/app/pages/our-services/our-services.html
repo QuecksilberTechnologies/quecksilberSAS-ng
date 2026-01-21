@@ -17,40 +17,20 @@
   }
 </div>
 
-<section class="space-y-16 max-w-7xl mx-auto py-4 md:py-8 mt-8">
+<section class="bg-primary/5 rounded-xl md:rounded-none p-10 mb-6 md:mb-0">
+  <div class="max-w-7xl mx-auto">
   <h2 class="text-2xl font-bold mb-8 text-center">Our Technology Stack</h2>
-  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
-    <div class="flex flex-col items-center">
-      <img src="img/tech/angular.png" alt="Angular" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">Angular</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/nodejs.svg" alt="Node.js" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">Node.js</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/aws.svg" alt="AWS" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">AWS</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/docker.svg" alt="Docker" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">Docker</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/postgresql.png" alt="PostgreSQL" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">PostgreSQL</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/mongodb.svg" alt="MongoDB" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">MongoDB</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/azure.svg" alt="Azure" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">Azure</span>
-    </div>
-    <div class="flex flex-col items-center">
-      <img src="img/tech/dotnet.png" alt="Azure" class="h-12 mb-2" loading="lazy" />
-      <span class="text-sm font-medium">ASP.NET Core</span>
-    </div>
+  @defer {
+    <qs-tech-stacks />  
+}@placeholder {
+  <div class="p-10 flex justify-center items-center">
+    <p-progress-spinner
+      ariaLabel="loading"
+      strokeWidth="4"
+      fill="transparent"
+      animationDuration=".5s"
+      [style]="{ width: '34px', height: '34px' }" />
   </div>
+  }
+</div>
 </section>

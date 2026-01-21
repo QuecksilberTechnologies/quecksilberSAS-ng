@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Instagram, Linkedin, Threads, Twitter } from '@shared/icons';
+import { Instagram, Linkedin, Twitter, Youtube } from '@shared/icons';
 import { FooterSocialLink } from '@shared/interfaces';
 
 @Component({
   selector: 'qs-footer',
-  imports: [Linkedin, Twitter, Instagram, Threads, RouterModule],
+  imports: [Linkedin, Twitter, Instagram, RouterModule, Youtube],
   templateUrl: './footer.html',
   styleUrl: './footer.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -27,10 +27,10 @@ export class Footer {
       url: 'https://www.instagram.com/quecksilber999',
       ariaLabel: 'Instagram',
     },
-    // {
-    //   name: 'Threads',
-    //   url: 'https://www.threads.com/quecksilber-technologies',
-    //   ariaLabel: 'Threads',
-    // },
+    {
+      name: 'Youtube',
+      url: 'https://www.youtube.com/@quecksilbertechnologies5555',
+      ariaLabel: 'Youtube',
+    },
   ]);
 }
