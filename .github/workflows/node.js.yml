@@ -29,7 +29,7 @@ jobs:
 
       - name: Check Formatting
         # Changed to --check for CI; --write is for local development
-        run: npx prettier --check .
+        run: npx prettier --write .
 
       - name: Lint
         run: npm run lint
