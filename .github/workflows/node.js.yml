@@ -31,3 +31,13 @@ jobs:
 
       - name: Build Project
         run: npm run build
+      
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::131052228622:role/sts-github
+          aws-region: ap-south-1
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync build/ s3://www.quecksilber.in --delete
