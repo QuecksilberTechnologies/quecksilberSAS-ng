@@ -56,4 +56,10 @@
     "typescript": "~5.9.2",
     "typescript-eslint": "8.42.0"
   }
+  "overrides": {
+  "lucide-angular": {
+    "@angular/common": "$@angular/common",
+    "@angular/core": "$@angular/core"
+  }
+}
 }
