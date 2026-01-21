@@ -50,4 +50,4 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/browser s3://www.quecksilber.org --delete
+          aws s3 sync /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/browser s3://www.quecksilber.org --delete --acl public-read
