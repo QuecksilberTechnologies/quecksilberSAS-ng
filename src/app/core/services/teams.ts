@@ -121,8 +121,8 @@ export class Teams {
             url: 'https://www.linkedin.com/in/riya-sharnagat-9b8923293',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
-          }
-        ]        
+          },
+        ],
       },
       {
         name: 'Sakshi Pardhi',
@@ -135,8 +135,8 @@ export class Teams {
             url: 'https://www.linkedin.com/in/sakshi-pardhi-6243212a5',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
-          }
-        ]        
+          },
+        ],
       },
       {
         name: 'Shatakshi Kaushik',
@@ -149,8 +149,8 @@ export class Teams {
             url: 'https://www.linkedin.com/in/shatakshi427',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
-          }
-        ]        
+          },
+        ],
       },
     ];
   }

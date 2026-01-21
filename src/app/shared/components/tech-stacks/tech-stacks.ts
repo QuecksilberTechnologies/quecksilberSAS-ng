@@ -8,6 +8,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './tech-stacks.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TechStacks {
-
-}
+export class TechStacks {}
