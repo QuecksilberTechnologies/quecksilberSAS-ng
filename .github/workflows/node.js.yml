@@ -46,7 +46,7 @@ jobs:
       - name: Fix Filename for S3
         # This copies the CSR version to the standard filename S3 expects
         # We use 'cp' instead of 'mv' just in case other processes need the original
-        run: cp /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/index.csr.html /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/index.html
+        run: cp /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/browser/index.csr.html /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/browser/index.html
 
       - name: Deploy to S3
         run: |
