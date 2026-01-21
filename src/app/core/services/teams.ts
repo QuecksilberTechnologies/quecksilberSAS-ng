@@ -138,6 +138,20 @@ export class Teams {
           }
         ]        
       },
+      {
+        name: 'Shatakshi Kaushik',
+        position: 'Marketing Intern',
+        image: 'img/team/Shatakshi-Kaushik.jpeg',
+        alt: 'Shatakshi Kaushik',
+        socialLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/shatakshi427',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          }
+        ]        
+      },
     ];
   }
 }
