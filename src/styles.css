@@ -6,20 +6,12 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --theme-primary: #6d1bab;
-  --theme-primary-light: #faf2ff;
-  --theme-background: #f7f8fa;
-
   /* Route progressbar */
   --ng-progress-color: #ca1922;
   --ng-progress-thickness: 3;
 
   /* PrimeNg */
   --p-message-text-sm-font-size: 0.92rem !important;
-
-  /* --p-inputtext-border-radius: 0.3rem !important;
-  --p-textarea-border-radius: 0.3rem !important;
-  --p-select-border-radius: 0.3rem !important; */
 
   --p-inputtext-focus-ring-width: 1px !important;
   --p-inputtext-focus-ring-style: solid !important;
@@ -44,8 +36,7 @@ html {
 html,
 body {
   font-family: 'Inter', sans-serif;
-  /* @apply bg-primary/5; */
-  @apply bg-slate-50;
+  @apply bg-slate-50/15;
 }
 
 .work-card {
