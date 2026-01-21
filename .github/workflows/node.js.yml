@@ -42,6 +42,13 @@ jobs:
           role-to-assume: arn:aws:iam::131052228622:role/sts-github-QT
           aws-region: ap-south-1
 
+     - name: Build Project
+       run: npm run build
+       
+      - name: Fix Filename for S3
+        # This copies the CSR version to the standard filename S3 expects
+        run: cp dist/quecksilber-sas-ng/browser/index.csr.html dist/quecksilber-sas-ng/browser/index.html
+
       - name: Deploy to S3
         run: |
-          aws s3 sync /home/runner/work/quecksilberSAS-ng/quecksilberSAS-ng/dist/quecksilberSAS-ng/browser s3://www.quecksilber.org --delete
+          aws s3 sync dist/quecksilber-sas-ng/browser s3://www.quecksilber.in --delete
