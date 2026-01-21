@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VersionUpdateDialogComponent } from './version-update-dialog';
+import VersionUpdateDialogComponent from './version-update-dialog';
 
 describe('VersionUpdateDialogComponent', () => {
   let component: VersionUpdateDialogComponent;
