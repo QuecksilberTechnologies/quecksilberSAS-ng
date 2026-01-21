@@ -15,8 +15,36 @@ export class Teams {
   fetchTeams() {
     return [
       {
-        name: 'Varun',
-        position: 'Investor',
+        name: 'Deepesh Gupta',
+        position: 'Founder & CEO',
+        image: 'img/team/38.png',
+        alt: 'Deepesh Gupta',
+        socialLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/deepesh-gupta-06a436296',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          },
+        ],
+      },
+      {
+        name: 'Poonam Gupta',
+        position: 'Head of Operations',
+        image: 'img/team/Poonam-Gupta.jpg',
+        alt: 'Poonam Gupta',
+        socialLinks: [
+          {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/poonam-gupta-bb91a03a5',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          },
+        ],
+      },
+      {
+        name: 'Varun Viswaari',
+        position: 'Strategic Investor',
         image: 'img/team/3.png',
         alt: 'Varun',
         socialLinks: [
@@ -41,42 +69,14 @@ export class Teams {
         ],
       },
       {
-        name: 'Deepesh Gupta',
-        position: 'Chief Executive Officer (Founder)',
-        image: 'img/team/38.png',
-        alt: 'Deepesh Gupta',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/deepesh-gupta-06a436296',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-        ],
-      },
-      {
-        name: 'Poonam Gupta',
-        position: 'Director of Operations',
-        image: 'img/team/Poonam-Gupta.jpg',
-        alt: 'Poonam Gupta',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/poonam-gupta-bb91a03a5',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-        ],
-      },
-      {
         name: 'Deepak',
-        position: 'Senior Architect',
+        position: 'Lead Solutions Architect',
         image: 'img/team/18.png',
         alt: 'Deepak',
         socialLinks: [
           {
             name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/deepak-rajput-779b0654',
+            url: '',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },
@@ -84,13 +84,13 @@ export class Teams {
       },
       {
         name: 'Abhishek',
-        position: 'Senior DevOps Engineer',
+        position: 'Lead DevOps Engineer',
         image: 'img/team/41.png',
         alt: 'Abhishek',
         socialLinks: [
           {
             name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/abhishek-kanojia-58312716b',
+            url: '',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },
@@ -98,7 +98,7 @@ export class Teams {
       },
       {
         name: 'Pallavi Vishwakarma',
-        position: 'Junior developer',
+        position: 'Software Engineer I',
         image: 'img/team/Pallavi-Vishwakarma.jpg',
         alt: 'Pallavi Vishwakarma',
         socialLinks: [
@@ -112,7 +112,7 @@ export class Teams {
       },
       {
         name: 'Riya Sharnagat',
-        position: 'Intern',
+        position: 'Software Engineering Intern',
         image: 'img/team/Riya-Sharnagat.jpg',
         alt: 'Riya Sharnagat',
         socialLinks: [
@@ -126,7 +126,7 @@ export class Teams {
       },
       {
         name: 'Sakshi Pardhi',
-        position: 'Intern',
+        position: 'Product / Technology Intern',
         image: 'img/team/SakshiPardhi.png',
         alt: 'Sakshi Pardhi',
         socialLinks: [
@@ -140,7 +140,7 @@ export class Teams {
       },
       {
         name: 'Shatakshi Kaushik',
-        position: 'Marketing Intern',
+        position: 'Growth Marketing Intern',
         image: 'img/team/Shatakshi-Kaushik.jpeg',
         alt: 'Shatakshi Kaushik',
         socialLinks: [

@@ -23,14 +23,16 @@
         <p class="font-med ium text-base">{{ member.position }}</p>
         <div class="flex justify-center gap-3">
           @for (socialLink of member.socialLinks; track $index) {
-          <a
-            target="_blank"
-            rel="noopener"
-            class="text-primary-600 hover:text-primary-800 transition"
-            [href]="socialLink.url"
-            [attr.aria-label]="socialLink.ariaLabel">
-            <lucide-angular class="w-5 h-5" [img]="socialLink.icon" />
-          </a>
+            @if(socialLink.url) {
+              <a
+              target="_blank"
+              rel="noopener"
+              class="text-primary-600 hover:text-primary-800 transition"
+              [href]="socialLink.url"
+              [attr.aria-label]="socialLink.ariaLabel">
+              <lucide-angular class="w-5 h-5" [img]="socialLink.icon" />
+            </a>
+            }
           }
         </div>
       </div>
