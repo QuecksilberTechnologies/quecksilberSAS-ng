@@ -22,7 +22,7 @@ export class App implements OnInit {
   readonly #destroyRef = inject(DestroyRef);
   readonly #primeng = inject(PrimeNG);
   readonly #dialogService = inject(DialogService);
-  protected ref: DynamicDialogRef | undefined;
+  protected ref: DynamicDialogRef | null = null;
 
   constructor() {
     this.versionUpdatesSub();
@@ -41,7 +41,7 @@ export class App implements OnInit {
           closable: false,
         });
 
-        this.ref.onClose.subscribe(() => {
+        this.ref?.onClose.subscribe(() => {
           location.reload();
         });
 
