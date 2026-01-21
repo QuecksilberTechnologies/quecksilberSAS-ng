@@ -1,6 +1,6 @@
 import { Injectable, signal } from '@angular/core';
 import { Team } from '@shared/interfaces';
-import { Instagram, Linkedin, Twitter } from 'lucide-angular';
+import { Linkedin } from 'lucide-angular';
 
 @Injectable({
   providedIn: 'root',
@@ -16,7 +16,7 @@ export class Teams {
     return [
       {
         name: 'Varun',
-        position: 'Chief Executive Officer (Founder)',
+        position: 'Investor',
         image: 'img/team/3.png',
         alt: 'Varun',
         socialLinks: [
@@ -26,101 +26,23 @@ export class Teams {
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },
-          {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
-          },
-          {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
-          },
+          // {
+          //   name: 'X',
+          //   url: '',
+          //   icon: Twitter,
+          //   ariaLabel: 'x',
+          // },
+          // {
+          //   name: 'Instagram',
+          //   url: '',
+          //   icon: Instagram,
+          //   ariaLabel: 'Instagram',
+          // },
         ],
       },
-      {
-        name: 'Poonam Gupta',
-        position: 'Human Resources Manager (HR)',
-        image: 'img/team/73.png',
-        alt: 'Poonam Gupta',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/quecksilber-technologies-hr-06b095128',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-          {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
-          },
-          {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
-          },
-        ],
-      },
-      {
-        name: 'Deepak',
-        position: 'Tech Team Lead',
-        image: 'img/team/18.png',
-        alt: 'Deepak',
-        socialLinks: [
-          {
-            name: 'LinkedIn',
-            url: 'https://www.linkedin.com/in/deepak-rajput-779b0654',
-            icon: Linkedin,
-            ariaLabel: 'LinkedIn',
-          },
-          {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
-          },
-          {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
-          },
-        ],
-      },
-      // {
-      //   name: 'Sujeet',
-      //   position: 'Senior Frontend Developer',
-      //   image: 'img/team/47.png',
-      //   alt: 'Sujeet',
-      //   socialLinks: [
-      //     {
-      //       name: 'LinkedIn',
-      //       url: '',
-      //       icon: Linkedin,
-      //       ariaLabel: 'LinkedIn',
-      //     },
-      //     {
-      //       name: 'X',
-      //       url: '',
-      //       icon: Twitter,
-      //       ariaLabel: 'x',
-      //     },
-      //     {
-      //       name: 'Instagram',
-      //       url: '',
-      //       icon: Instagram,
-      //       ariaLabel: 'Instagram',
-      //     },
-      //   ],
-      // },
       {
         name: 'Deepesh Gupta',
-        position: 'Senior Backend Developer',
+        position: 'Chief Executive Officer (Founder)',
         image: 'img/team/38.png',
         alt: 'Deepesh Gupta',
         socialLinks: [
@@ -130,17 +52,33 @@ export class Teams {
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },
+        ],
+      },
+      {
+        name: 'Poonam Gupta',
+        position: 'Director of Operations',
+        image: 'img/team/Poonam-Gupta.jpg',
+        alt: 'Poonam Gupta',
+        socialLinks: [
           {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/poonam-gupta-bb91a03a5',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
           },
+        ],
+      },
+      {
+        name: 'Deepak',
+        position: 'Senior Architect',
+        image: 'img/team/18.png',
+        alt: 'Deepak',
+        socialLinks: [
           {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/deepak-rajput-779b0654',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
           },
         ],
       },
@@ -156,25 +94,26 @@ export class Teams {
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
           },
+        ],
+      },
+      {
+        name: 'Pallavi Vishwakarma',
+        position: 'Junior developer',
+        image: 'img/team/Pallavi-Vishwakarma.jpg',
+        alt: 'Pallavi Vishwakarma',
+        socialLinks: [
           {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
-          },
-          {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/pallavi00',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
           },
         ],
       },
-      // Riya Sharnagat
       {
         name: 'Riya Sharnagat',
         position: 'Intern',
-        image: 'img/team/73.png',
+        image: 'img/team/Riya-Sharnagat.jpg',
         alt: 'Riya Sharnagat',
         socialLinks: [
           {
@@ -182,20 +121,22 @@ export class Teams {
             url: 'https://www.linkedin.com/in/riya-sharnagat-9b8923293',
             icon: Linkedin,
             ariaLabel: 'LinkedIn',
-          },
+          }
+        ]        
+      },
+      {
+        name: 'Sakshi Pardhi',
+        position: 'Intern',
+        image: 'img/team/SakshiPardhi.png',
+        alt: 'Sakshi Pardhi',
+        socialLinks: [
           {
-            name: 'X',
-            url: '',
-            icon: Twitter,
-            ariaLabel: 'x',
-          },
-          {
-            name: 'Instagram',
-            url: '',
-            icon: Instagram,
-            ariaLabel: 'Instagram',
-          },
-        ],
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/sakshi-pardhi-6243212a5',
+            icon: Linkedin,
+            ariaLabel: 'LinkedIn',
+          }
+        ]        
       },
     ];
   }
