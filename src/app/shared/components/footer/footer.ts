@@ -14,23 +14,23 @@ export class Footer {
   readonly socialLinks = signal<FooterSocialLink[]>([
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/quecksilber-technologies-hr-06b095128',
+      url: 'https://www.linkedin.com/in/quecksilber-technologies',
       ariaLabel: 'LinkedIn',
     },
     {
       name: 'Twitter',
-      url: 'https://x.com/quecksilber-technologies',
+      url: 'https://x.com/Quecksilbe11165',
       ariaLabel: 'x',
     },
     {
       name: 'Instagram',
-      url: 'https://www.instagram.com/quecksilber-technologies',
+      url: 'https://www.instagram.com/quecksilber999',
       ariaLabel: 'Instagram',
     },
-    {
-      name: 'Threads',
-      url: 'https://www.threads.com/quecksilber-technologies',
-      ariaLabel: 'Threads',
-    },
+    // {
+    //   name: 'Threads',
+    //   url: 'https://www.threads.com/quecksilber-technologies',
+    //   ariaLabel: 'Threads',
+    // },
   ]);
 }
