@@ -45,6 +45,5 @@ jobs:
           aws-region: ap-south-1
 
       - name: Deploy to S3
-    
         run: |
-          aws s3 sync build/ s3://www.quecksilber.in --delete
+          aws s3 sync dist/quecksilber-sas-ng/browser s3://www.quecksilber.in --delete
