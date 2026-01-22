@@ -17,7 +17,7 @@ export class Teams {
       {
         name: 'Varun Viswaari',
         position: 'Founder & CEO',
-        image: 'img/team/3.png',
+        image: 'https://placehold.net/9.png',
         alt: 'Varun',
         socialLinks: [
           {
@@ -43,7 +43,7 @@ export class Teams {
       {
         name: 'Poonam Gupta',
         position: 'Head of Operations',
-        image: 'img/team/Poonam-Gupta.jpg',
+        image: 'https://placehold.net/3.png',
         alt: 'Poonam Gupta',
         socialLinks: [
           {
@@ -57,7 +57,7 @@ export class Teams {
       {
         name: 'Deepak',
         position: 'Lead Solutions Architect',
-        image: 'img/team/18.png',
+        image: 'https://placehold.net/7.png',
         alt: 'Deepak',
         socialLinks: [
           {
@@ -71,7 +71,7 @@ export class Teams {
       {
         name: 'Abhishek',
         position: 'Lead DevOps Engineer',
-        image: 'img/team/41.png',
+        image: 'https://placehold.net/10.png',
         alt: 'Abhishek',
         socialLinks: [
           {
@@ -85,7 +85,7 @@ export class Teams {
       {
         name: 'Deepesh Gupta',
         position: 'Lead Backend Developer',
-        image: 'img/team/38.png',
+        image: 'https://placehold.net/8.png',
         alt: 'Deepesh Gupta',
         socialLinks: [
           {
@@ -98,7 +98,7 @@ export class Teams {
       },
       {
         name: 'Pallavi Vishwakarma',
-        position: 'Software Engineer I',
+        position: 'Software Engineer',
         image: 'img/team/Pallavi-Vishwakarma.jpg',
         alt: 'Pallavi Vishwakarma',
         socialLinks: [
@@ -112,7 +112,7 @@ export class Teams {
       },
       {
         name: 'Riya Sharnagat',
-        position: 'Software Engineering Intern',
+        position: 'Software Engineer',
         image: 'img/team/Riya-Sharnagat.jpg',
         alt: 'Riya Sharnagat',
         socialLinks: [
@@ -126,7 +126,7 @@ export class Teams {
       },
       {
         name: 'Sakshi Pardhi',
-        position: 'Product / Technology Intern',
+        position: 'Software Engineer',
         image: 'img/team/SakshiPardhi.png',
         alt: 'Sakshi Pardhi',
         socialLinks: [
@@ -140,7 +140,7 @@ export class Teams {
       },
       {
         name: 'Shatakshi Kaushik',
-        position: 'Growth Marketing Intern',
+        position: 'Growth Marketing',
         image: 'img/team/Shatakshi-Kaushik.jpeg',
         alt: 'Shatakshi Kaushik',
         socialLinks: [

@@ -3,11 +3,10 @@ import { ChangeDetectionStrategy, Component, inject, input, signal } from '@angu
 import { Teams } from '@core/services/teams';
 import { Team } from '@shared/interfaces';
 import { LucideAngularModule } from 'lucide-angular';
-import { CardModule } from 'primeng/card';
 
 @Component({
   selector: 'qs-team-lists',
-  imports: [CardModule, LucideAngularModule, NgOptimizedImage],
+  imports: [LucideAngularModule, NgOptimizedImage],
   templateUrl: './team-lists.html',
   styleUrl: './team-lists.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
