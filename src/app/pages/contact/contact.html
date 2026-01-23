@@ -2,15 +2,15 @@
   pageTitle="Contact Us"
   pageDescription="Get in touch with Quecksilber Technologies for inquiries, support, or collaboration opportunities. We're here to help you on your digital journey." />
 
-<div class="container lg:max-w-7xl mx-auto py-4 md:py-8">
-  <div class="grid lg:grid-cols-2 gap-12">
+<div class="space-y-14 py-4 md:py-6">
+  <div class="grid lg:grid-cols-2 gap-8 container lg:max-w-7xl mx-auto">
     <div class="space-y-4">
       <h4 class="text-3xl font-bold font-headline mb-6">Get in Touch</h4>
-      <p-card class="p-3">
-        <form class="flex flex-col gap-4" [formGroup]="contactForm">
+      <p-card class="p-1">
+        <form class="grid grid-cols-1 gap-4" [formGroup]="contactForm">
           <!-- User Name -->
-          <div class="space-y-2">
-            <label class="block" for="userName">Name</label>
+          <div class="space-y-1">
+            <label for="userName" class="block font-medium">Name</label>
             <input
               formControlName="userName"
               class="w-full"
@@ -18,16 +18,18 @@
               type="text"
               placeholder="e.g. Jane Doe"
               pInputText
-              [pAutoFocus]="true"
+              [pAutoFocus]="false"
               [invalid]="isInvalid('userName')" />
             @if (isInvalid('userName')) {
-            <p-message severity="error" size="small" variant="simple">Name is required.</p-message>
+              <p-message severity="error" size="small" variant="simple">
+              Name is required.
+            </p-message>
             }
           </div>
 
           <!-- Email -->
-          <div class="space-y-2">
-            <label class="block" for="email">Email</label>
+          <div class="space-y-1">
+            <label for="email" class="block font-medium">Email</label>
             <input
               formControlName="email"
               class="w-full"
@@ -37,13 +39,15 @@
               pInputText
               [invalid]="isInvalid('email')" />
             @if (isInvalid('email')) {
-            <p-message severity="error" size="small" variant="simple">Email is required.</p-message>
+              <p-message severity="error" size="small" variant="simple">
+              Email is required.
+            </p-message>
             }
           </div>
 
           <!-- Message -->
-          <div class="space-y-2">
-            <label class="block" for="message">Message</label>
+          <div class="space-y-1">
+            <label for="message" class="block font-medium">Message</label>
             <textarea
               formControlName="message"
               class="w-full"
@@ -53,22 +57,24 @@
               pTextarea
               [invalid]="isInvalid('message')"></textarea>
             @if (isInvalid('message')) {
-            <p-message severity="error" size="small" variant="simple"
-              >Message is required.</p-message
-            >
+            <p-message severity="error" size="small" variant="simple">
+              Message is required.
+            </p-message>
             }
           </div>
         </form>
 
-        <div class="flex justify-end w-full mt-4">
+        <div class="flex justify-end gap-2 mt-2.5">
           <p-button
+            class="w-full! md:w-40!"
+            styleClass="w-full"
             [severity]="'primary'"
-            [label]="isSaving() ? 'Saving...' : 'Send Message'"
+            [icon]="'pi pi-send'"
+            [label]="isSaving() ? 'Saving...' : 'Send'"
             [loading]="isSaving()"
             [disabled]="contactForm.invalid || isSaving()"
             (onClick)="onSend()" />
         </div>
-        <!-- <pre class="text-sm text-red-600 mt-10">{{contactForm.value|json}}</pre> -->
       </p-card>
     </div>
 

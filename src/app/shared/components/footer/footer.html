@@ -9,18 +9,20 @@
       <a
         target="_blank"
         rel="noopener"
-        class="text-primary-50 hover:text-primary-200 transition border border-zinc-500 rounded-lg p-2"
+        class="text-primary-50 hover:text-primary-400! transition border border-zinc-500 rounded-lg p-2"
         [href]="socialLink.url"
         [attr.aria-label]="socialLink.ariaLabel">
-        @switch (socialLink.name) { @case ("LinkedIn") {
-        <qs-linkedin class="w-5 h-5 text-white" />
+        @switch (socialLink.name) { 
+        @case ("LinkedIn") {
+        <qs-linkedin class="w-5 h-5" />
         } @case ("Twitter") {
-        <qs-twitter class="w-5 h-5 text-white" />
+        <qs-twitter class="w-5 h-5" />
         } @case ("Instagram") {
-        <qs-instagram class="w-5 h-5 text-white" />
+        <qs-instagram class="w-5 h-5" />
         } @case ("Youtube") {
-        <qs-youtube class="w-5 h-5 text-white" />
-        } }
+        <qs-youtube class="w-5 h-5" />
+        } 
+      }
       </a>
       }
     </div>

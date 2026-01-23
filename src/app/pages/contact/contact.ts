@@ -19,7 +19,6 @@ import { TextareaModule } from 'primeng/textarea';
     InputTextModule,
     TextareaModule,
     ButtonModule,
-    // JsonPipe,
   ],
   templateUrl: './contact.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -33,6 +32,7 @@ export default class Contact implements OnInit {
     this.initForm();
   }
 
+  // TODO: Add all validation
   initForm() {
     this.contactForm = this.#fb.group({
       userName: ['', Validators.required],
