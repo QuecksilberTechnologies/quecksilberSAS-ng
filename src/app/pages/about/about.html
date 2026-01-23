@@ -3,44 +3,46 @@
   pageDescription="Quecksilber Technologies is a next-gen software solutions company focused on
     innovation, reliability, and excellence in digital transformation." />
 
-<div class="space-y-16 container mx-auto my-4 py-4">
-  <div class="flex flex-col lg:flex-row gap-4 items-start">
-    <div>
+<div class="space-y-16 py-4 md:py-8">
+  <section class="bg-primary/5 lg:rounded-2xl container lg:max-w-7xl mx-auto">
+    <div class="flex flex-col lg:flex-row items-center justify-between gap-6 p-4">
       <img
-      ngSrc="img/about.jpg"
-      placeholder="data:image/png;base64,iVBORw0K..."
-      priority
-      width="300"
-      height="400"
-      alt="Quecksilber Office"
-      class="rounded-xl shadow-2xl shadow-primary/15 w-full object-cover h-[300px] md:h-[400px]" />
+        ngSrc="img/about.jpg"
+        alt="Quecksilber Hero"
+        width="450"
+        height="450"
+        placeholder="data:image/png;base64,iVBORw0K..."
+        priority
+        class="w-full max-w-[450px] object-cover rounded-xl" />
+      <div class="space-y-3 md:space-y-4 p-4">
+        <h3 class="font-medium text-2xl md:text-3xl text-center lg:text-left text-primary">
+          Empowering Digital Journeys with Innovative Solutions
+        </h3>
+
+        <p class="italic text-gray-500 text-center lg:text-left text-base md:text-lg">
+          At Quecksilber, we simplify technology by blending creativity with code to craft powerful
+          enterprise solutions tailored for today's business challenges.
+        </p>
+
+        <ul class="text-base md:text-lg flex flex-col">
+          @for (item of items; track $index) {
+          <li class="flex items-start gap-2 max-w-max">
+            <lucide-angular
+              class="w-5 h-5 mt-0.5 flex-shrink-0 text-primary"
+              [strokeWidth]="1.5"
+              [img]="item.icon" />
+            <p class="italic text-gray-800">{{ item.text }}</p>
+          </li>
+          }
+        </ul>
+      </div>
     </div>
-
-    <div class="space-y-6 p-4">
-      <h3 class="font-medium text-2xl md:text-4xl text-center lg:text-left text-balance leading-12">
-        Empowering Digital Journeys with Innovative Solutions
-      </h3>
-
-      <p class="italic text-gray-600 text-center lg:text-left text-balance">
-        At Quecksilber, we simplify technology by blending creativity with code to craft powerful
-        enterprise solutions tailored for today's business challenges.
-      </p>
-
-      <ul class="space-y-1 text-base md:text-lg flex flex-col">
-        @for (item of items; track $index) {
-        <li class="flex items-start max-w-max">
-          <lucide-angular
-            class="w-6 h-6 mr-2 mt-0.5"
-            color="#2a3481"
-            [strokeWidth]="1.5"
-            [img]="item.icon" />
-          <p class="italic text-gray-600">{{ item.text }}</p>
-        </li>
-        }
-      </ul>
-    </div>
-  </div>
+  </section>
 
   <!-- Teams at Quecksilber -->
-  <qs-team-lists heading="Meet Our Leadership" subHeading="The architects of our success." />
+  <section class="container lg:max-w-7xl mx-auto">
+    <qs-team-lists
+      heading="Teams at Quecksilber"
+      subHeading="Meet the talented teams driving our innovation and success." />
+  </section>
 </div>

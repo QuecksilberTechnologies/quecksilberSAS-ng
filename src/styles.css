@@ -28,6 +28,10 @@
   --p-card-border-radius: 0.8rem !important;
 }
 
+@theme {
+  --color-qt-accent: #d21d2a;
+}
+
 html {
   font-size: 14px;
   height: 100%;
@@ -36,7 +40,7 @@ html {
 html,
 body {
   font-family: 'Inter', sans-serif;
-  @apply bg-slate-50/15;
+  @apply bg-red-50/5;
 }
 
 .work-card {
