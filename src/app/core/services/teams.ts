@@ -43,7 +43,7 @@ export class Teams {
       {
         name: 'Poonam Gupta',
         position: 'Head of Operations',
-        image: 'https://placehold.net/3.png',
+        image: 'img/team/Poonam-Gupta.jpg',
         alt: 'Poonam Gupta',
         socialLinks: [
           {
@@ -124,11 +124,25 @@ export class Teams {
           },
         ],
       },
+      // {
+      //   name: 'Sakshi Pardhi',
+      //   position: 'Software Engineer',
+      //   image: 'img/team/SakshiPardhi.png',
+      //   alt: 'Sakshi Pardhi',
+      //   socialLinks: [
+      //     {
+      //       name: 'LinkedIn',
+      //       url: 'https://www.linkedin.com/in/sakshi-pardhi-6243212a5',
+      //       icon: Linkedin,
+      //       ariaLabel: 'LinkedIn',
+      //     },
+      //   ],
+      // },
       {
-        name: 'Sakshi Pardhi',
-        position: 'Software Engineer',
-        image: 'img/team/SakshiPardhi.png',
-        alt: 'Sakshi Pardhi',
+        name: 'Shaily Gupta',
+        position: 'Cyber Security (Jr Engineer)',
+        image: 'img/team/ShailyGupta.jpg',
+        alt: 'Shaily Gupta',
         socialLinks: [
           {
             name: 'LinkedIn',
